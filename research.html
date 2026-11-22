@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Sophia “Soomin” Lee</title>
+<meta name="description" content="Research projects of Sophia “Soomin” Lee: human-centered AI in learning, learning ecologies in online professional learning, and learning analytics of engagement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1d2433;
+    --muted: #5b6475;
+    --line: #e3e6ec;
+    --bg: #f1f6fb;
+    --card: #ffffff;
+    --accent: #2f5d8a;
+    --accent-soft: #eaf1f8;
+    --serif: "Lora", Georgia, serif;
+    --sans: "Lora", Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.7; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:hover { text-decoration-thickness: 2px; }
+  .skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: #fff; padding: 8px 12px; z-index: 10; }
+  .skip:focus { left: 8px; top: 8px; }
+
+  nav { position: sticky; top: 0; z-index: 5; background: rgba(241,246,251,.94); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  nav .inner { max-width: 1040px; margin: 0 auto; padding: 14px 24px; display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+  nav .name { font-family: var(--serif); font-weight: 700; color: var(--ink); text-decoration: none; margin-right: auto; font-size: 18px; }
+  nav .name .mono { font-family: "Allura", "Great Vibes", cursive; font-weight: 400; font-size: 40px; line-height: 1; color: var(--accent); letter-spacing: .02em; }
+  nav a.link { color: var(--muted); text-decoration: none; font-size: 15px; }
+  nav a.link:hover { color: var(--accent); }
+
+  main { max-width: 1040px; margin: 0 auto; padding: 0 24px 64px; }
+  header.hero { padding: 48px 0 24px; border-bottom: 1px solid var(--line); }
+  .hero h1 { font-family: var(--serif); font-size: 31px; line-height: 1.2; margin: 0 0 24px; letter-spacing: -.01em; text-align: left; }
+  .hero h1 .ko { font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; font-weight: 700; margin-left: 14px; white-space: nowrap; display: inline-block; }
+  .intro { display: grid; grid-template-columns: 224px 1fr; gap: 40px; align-items: start; }
+  .profile img { width: 100%; height: auto; display: block; border-radius: 4px; }
+  .pcard { margin-top: 14px; font-size: 14px; line-height: 1.5; color: var(--ink); }
+  .pcard p { margin: 0; }
+  .pcard .ptitle { font-weight: 600; }
+  .pcard .pschool { color: var(--muted); margin-bottom: 8px; }
+  .pcard .pmail { display: inline-block; margin-bottom: 10px; }
+  .links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .links a { display: inline-block; font-size: 13px; font-weight: 600; text-decoration: none; border: 1px solid var(--accent); border-radius: 999px; padding: 3px 11px; }
+  .links a:hover { background: var(--accent); color: #fff; }
+  .bio p { font-size: 17.5px; line-height: 1.75; margin: 0 0 18px; }
+  .bio strong { color: var(--ink); }
+  .bio p.lead { font-size: 19px; line-height: 1.6; font-weight: 500; }
+
+  section { padding: 48px 0 8px; }
+  h2 { font-family: var(--serif); font-size: 28px; margin: 0 0 18px; }
+  h3 { font-size: 18px; margin: 0 0 6px; }
+  .kicker { text-transform: uppercase; letter-spacing: .08em; font-size: 12.5px; font-weight: 700; color: var(--accent); margin: 0 0 6px; }
+  p { margin: 0 0 14px; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 22px 22px 10px; }
+  .card ul { padding-left: 18px; margin: 6px 0 14px; }
+  .card li { margin-bottom: 6px; }
+
+  .project { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 24px; margin-bottom: 18px; }
+  .meta-s { color: var(--muted); font-size: 14.5px; margin: 0 0 8px; }
+  .ptl { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .ptl .when { display: inline-block; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 13px; border-radius: 4px; padding: 1px 8px; white-space: nowrap; }
+  .project .meta .when { display: inline-block; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 13px; border-radius: 4px; padding: 1px 8px; margin-right: 10px; }
+  .project .meta { color: var(--muted); font-size: 14.5px; margin: 0 0 12px; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 16px 0 16px; padding: 0; list-style: none; counter-reset: step; }
+  .steps li { background: var(--accent-soft); border-radius: 8px; padding: 12px 12px 10px; font-size: 14.5px; counter-increment: step; }
+  .steps li::before { content: counter(step); display: block; font-weight: 700; color: var(--accent); font-size: 13px; margin-bottom: 2px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 8px; padding: 0; list-style: none; }
+  .tags li { font-size: 13px; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; background: var(--card); }
+
+  .gallery { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 6px 0 18px; }
+  .gallery figure { margin: 0; }
+  .gallery .zoom { display: block; width: 100%; padding: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; cursor: zoom-in; background: #0f1630; }
+  .gallery img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; }
+  .gallery figcaption { font-size: 13.5px; color: var(--muted); line-height: 1.45; margin-top: 8px; }
+  .gallery figcaption strong { color: var(--ink); }
+  dialog.lightbox { border: 0; padding: 0; background: transparent; max-width: min(1100px, 94vw); }
+  dialog.lightbox::backdrop { background: rgba(10,14,25,.82); }
+  dialog.lightbox img { display: block; max-width: 100%; max-height: 86vh; border-radius: 6px; }
+  dialog.lightbox p { color: #e8ebf2; font-size: 14px; margin: 10px 2px 0; }
+  dialog.lightbox .close { position: absolute; top: -40px; right: 0; background: none; border: 0; color: #fff; font-size: 28px; cursor: pointer; }
+  .more { margin-top: 18px; }
+  .rimg text { font-family: var(--sans); }
+  .rimg { display: block; width: 100%; height: auto; margin: -4px 0 16px; }
+  .edu { list-style: none; padding: 0; margin: 0; }
+  .edu li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); line-height: 1.55; }
+  .edu li:first-child { border-top: 0; }
+  .edu .yr { font-weight: 700; color: var(--accent); }
+  .card ul.tl, .tl { list-style: none; padding: 0; margin: 4px 0 12px; }
+  .tl li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.5; margin: 0; }
+  .tl li:first-child { border-top: 0; }
+  .tl li.grp { display: block; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); padding: 16px 0 4px; border-top: 0; }
+  .tl li.grp:first-child { padding-top: 4px; }
+  .tl li.grp + li { border-top: 0; }
+  .stack { display: grid; gap: 18px; }
+  .tl .yr { font-weight: 700; color: var(--accent); font-size: 14px; }
+  .tl .org { color: var(--ink); }
+  .tl .d { color: var(--muted); font-size: 14px; }
+  .contact { display: flex; align-items: baseline; gap: 28px; flex-wrap: wrap; }
+  .contact h2 { font-size: 22px; margin: 0; }
+  .contact > div { flex: 1; min-width: 260px; }
+  .contact p { margin: 0 0 6px; }
+  .note { background: #ffffff; border-left: 3px solid var(--accent); border-radius: 6px; padding: 12px 16px; font-size: 16px; margin-top: 22px; }
+  .contact-line { margin: 0 0 8px; }
+  .pubs { list-style: none; padding: 0; margin: 0 0 24px; }
+  .pubs li { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15.5px; line-height: 1.55; }
+  .pubs li:last-child { border-bottom: 0; }
+  .me { font-weight: 700; }
+  .pubs .note { color: var(--muted); font-size: 14px; }
+  h3.sub { font-size: 15px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 26px 0 4px; }
+
+  .plain { padding-left: 18px; }
+  .plain li { margin-bottom: 8px; }
+
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer .inner { max-width: 1040px; margin: 0 auto; padding: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+  @media (max-width: 720px) {
+    body { font-size: 16px; }
+    .hero h1 { font-size: 30px; text-align: left; }
+    .hero h1 .ko { display: block; margin: 6px 0 0; }
+      .intro { grid-template-columns: 1fr; gap: 24px; }
+    .profile img { max-width: 240px; }
+    .grid2 { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .gallery { grid-template-columns: 1fr; }
+    nav .inner { gap: 14px; }
+  }
+
+  .rp-intro { padding: 48px 0 8px; border-bottom: 1px solid var(--line); }
+  .rp-intro h1 { font-family: var(--serif); font-size: 40px; margin: 0 0 18px; }
+  .rp-intro .lead { font-size: 18px; line-height: 1.65; }
+  .areas { list-style: none; padding: 0; margin: 22px 0 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .areas li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; font-size: 15px; line-height: 1.5; }
+  .areas a { font-weight: 700; text-decoration: none; display: block; margin-bottom: 4px; font-size: 16px; }
+  .area { padding: 44px 0 8px; }
+  .area > p.desc { color: var(--ink); }
+  .folder { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 0; margin: 14px 0; }
+  .folder summary { list-style: none; cursor: pointer; padding: 18px 52px 12px 22px; position: relative; border-radius: 10px; }
+  .folder summary::-webkit-details-marker { display: none; }
+  .folder summary::after { content: ""; position: absolute; right: 22px; top: 24px; width: 9px; height: 9px; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(45deg); transition: transform .2s; }
+  .folder[open] summary::after { transform: rotate(-135deg); top: 28px; }
+  .folder summary:hover { background: #f6f9fc; }
+  .folder summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .folder .ftop { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .folder .count { font-size: 13px; color: var(--muted); }
+  .folder .works { padding: 0 22px 8px; }
+  .folder h3 { font-size: 17px; margin: 0 0 4px; }
+  .folder .fdesc { color: var(--muted); font-size: 15px; margin: 0; }
+  .works { list-style: none; padding: 0; margin: 0; }
+  .works li { padding: 11px 0; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.55; }
+  .badge { display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; border-radius: 4px; padding: 1px 7px; margin-right: 8px; vertical-align: 1px; }
+  .b-journal { background: #e3eefa; color: #24507a; }
+  .b-review { background: #f3ecdc; color: #7a5a12; }
+  .b-conf { background: #e7f2ea; color: #2f6b45; }
+  .b-diss { background: #efe6f5; color: #5e3a7a; }
+  .b-chapter { background: #eef0f3; color: #4a5263; }
+  .award { color: #7a5a12; font-weight: 600; }
+  .works li:target { background: #fff7e0; outline: 2px solid #e8c766; outline-offset: 2px; border-radius: 4px; }
+  .back { display: inline-block; margin-top: 8px; font-size: 15px; }
+  @media (max-width: 720px) { .areas { grid-template-columns: 1fr; } .rp-intro h1 { font-size: 32px; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav aria-label="Main">
+  <div class="inner">
+    <a class="name" href="index.html" aria-label="Sophia “Soomin” Lee, home"><span class="mono" aria-hidden="true">SSL</span></a>
+    <a class="link" href="research.html" aria-current="page"><strong>Research</strong></a>
+    <a class="link" href="index.html#teaching">Teaching</a>
+    <a class="link" href="index.html#design">Design</a>
+    <a class="link" href="index.html#publications">Publications</a>
+    <a class="link" href="index.html#service">Service</a>
+    <a class="link" href="index.html#contact">Contact</a>
+    <a class="link" href="cv.pdf">CV</a>
+  </div>
+</nav>
+<main id="main">
+  <header class="rp-intro">
+    <h1>Research</h1>
+    <p class="lead">My research asks how learning environments, increasingly shaped by AI, can be designed around learners to support their engagement, self-regulation, and confidence in their own capabilities. Bringing together learning theories, human-centered design, and quantitative, computational, and qualitative methods, my work spans two lines of research and a methodological strand that connects them:</p>
+    <ul class="areas">
+      <li><a href="#ai">Human-centered AI in learning and education</a>How AI-mediated learning environments shape learners’ interaction, self-regulation, and confidence, and how AI support can be designed to strengthen rather than replace learners’ own thinking.</li>
+      <li><a href="#ecologies">Learning ecologies in online learning</a>How online professional learning, such as micro-credentials, can sustain engagement and build self-efficacy, viewed through the learners, instructors, and institutions that shape it.</li>
+      <li><a href="#analytics">Learning analytics of engagement and persistence</a>A methodological strand across both lines: using survival analysis, clustering, and temporal analysis to understand how learners engage, persist, or disengage in online environments.</li>
+    </ul>
+    <p>Explore examples of this work below. Feel free to <a href="mailto:soomin.lee@ufl.edu">reach out</a> if you would like to learn more, especially about manuscripts under review.</p>
+  </header>
+
+  <section class="area" id="ai" aria-labelledby="ai-h">
+    <h2 id="ai-h">Human-centered AI in learning and education</h2>
+    <p class="desc">How AI-mediated learning environments shape learners’ interaction, self-regulation, and confidence, and how AI support can be designed to strengthen rather than replace learners’ own thinking.</p>
+    <details class="folder">
+      <summary>
+        <span class="ftop"><h3>AI-mediated discussion and feedback</h3></span>
+        <p class="fdesc">Comparing AI-mediated and traditional online discussion, and synthesizing evidence on generative AI feedback and chatbots.</p>
+      </summary>
+      <ul class="works">
+        <li><span class="badge b-journal">Journal</span><span class="me">Lee, S. S.</span>, &amp; Moore, R. L. (2024). Harnessing generative AI (GenAI) for automated feedback in higher education: A systematic review. <em>Online Learning, 28</em>(3). <a href="https://doi.org/10.24059/olj.v28i3.4593">https://doi.org/10.24059/olj.v28i3.4593</a></li>
+        <li><span class="badge b-review">Under review</span><span class="me">Lee, S. S.</span>, Moore, R. L., Shin, J., &amp; DeLeon, J. AI-mediated discussion platform and the paradox of social presence: An exploratory mixed-methods study.</li>
+        <li><span class="badge b-review">Under review</span><span class="me">Lee, S. S.</span>, Shin, J., &amp; Moore, R. L. How platform design shapes learner discourse: A machine learning comparison of AI-mediated and traditional online discussions.</li>
+        <li><span class="badge b-conf">Conference</span><span class="me">Lee, S. S.</span>, DeLeon, J., Shin, J., &amp; Moore, R. L. (2026, April). AI-supported forums and the paradox of social presence: A mixed-methods study using the CoI framework. AERA’26, Los Angeles, CA.</li>
+        <li><span class="badge b-conf">Conference</span><span class="me">Lee, S. S.</span>, Cisternas, L., Prasad, P. G., &amp; Adhami, N. (2025, October). Roles and effectiveness of chatbots in higher education: A meta-analysis. AECT’25, Las Vegas, NV.</li>
+        <li><span class="badge b-conf">Conference</span><span class="me">Lee, S. S.</span>, Shin, J., &amp; Moore, R. L. (2025, October). Forum wars: Can AI-supported discussion forums awaken engagement in discussion forums? AECT’25, Las Vegas, NV.</li>
+      </ul>
+    </details>
+    <details class="folder">
+      <summary>
+        <span class="ftop"><h3>AI help-seeking and self-regulated learning</h3></span>
+        <p class="fdesc">How students’ self-efficacy and self-regulated learning relate to the way they seek help from AI in programming courses.</p>
+      </summary>
+      <ul class="works">
+        <li><span class="badge b-diss">Dissertation</span>Self-efficacy and AI help-seeking in a large asynchronous online programming course, conducted in partnership with an engineering instructor (in progress).</li>
+        <li><span class="badge b-conf">Conference</span>Cruz Castro, L. M., &amp; <span class="me">Lee, S. S.</span> (2027, April). Response length is not self-regulation: LLM feedback in an introductory programming course. AERA’27, Toronto, ON. (Accepted)</li>
+        <li><span class="badge b-conf">Conference</span><span class="me">Lee, S. S.</span> (2026, November). Bridging or bypassing? GenAI’s role in students’ help-seeking landscape in online programming courses. ICEM Graduate Student Panel, AECT’26, Chicago, IL.</li>
+        <li><span class="badge b-conf">Conference</span><span class="me">Lee, S. S.</span> (2026, October). Context-dependent AI help-seeking in programming education: The role of self-regulated learning profiles. LSGSC’26, Buffalo, NY.</li>
+      </ul>
+    </details>
+    <details class="folder">
+      <summary>
+        <span class="ftop"><h3>AI in collaborative learning</h3></span>
+        <p class="fdesc">How generative AI supports the regulation of group learning in collaborative language learning.</p>
+      </summary>
+      <ul class="works">
+        <li><span class="badge b-conf">Conference</span>Han, Y., <span class="me">Lee, S. S.</span>, &amp; Chang, Y. (2027, April). Sharing regulation: Group interaction patterns in GenAI-mediated L2 learning. AERA’27, Toronto, ON. (Accepted)</li>
+        <li><span class="badge b-conf">Conference</span>Chang, Y., <span class="me">Lee, S. S.</span>, Han, Y., &amp; Sghyar, N. (2026, November). AI as a regulatory tool in collaborative foreign language learning. AECT’26, Chicago, IL.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="area" id="ecologies" aria-labelledby="ecologies-h">
+    <h2 id="ecologies-h">Learning ecologies in online learning</h2>
+    <p class="desc">How online professional learning, such as micro-credentials, can sustain engagement and build self-efficacy, viewed through the learners, instructors, and institutions that shape it.</p>
+    <details class="folder">
+      <summary>
+        <span class="ftop"><h3>Statewide literacy micro-credential for PreK–6 educators</h3></span>
+        <p class="fdesc">Completion, engagement, and teacher self-efficacy in a large-scale online professional learning program.</p>
+      </summary>
+      <ul class="works">
+        <li><span class="badge b-journal">Journal</span><span class="me">Lee, S. S.</span>, &amp; Closser, A. H. (in press). From early engagement to actionable intervention: Rethinking learning analytics for online professional learning. <em>Online Learning</em>. <span class="award">2025 Best Paper Award, UF College of Education Research Symposium</span></li>
+        <li><span class="badge b-journal">Journal</span>Pico, D. L., <span class="me">Lee, S. S.</span>, Cummings, C. M., Giani, M. V., Banks, J., Bratsch-Hines, M., &amp; Walton-Walker, T. (2025). Barriers and supports for successful completion of an emergent literacy micro-credential: An analysis at three levels of the professional learning system. <em>Professional Development in Education</em>. <a href="https://doi.org/10.1080/19415257.2025.2593891">https://doi.org/10.1080/19415257.2025.2593891</a></li>
+        <li><span class="badge b-conf">Conference</span><span class="me">Lee, S. S.</span>, Bratsch-Hines, M., Long-Diaz, A., Pico, D. L., Taksier, K. A., Banks, J., Xu, R., Wilson, A., Harker, L., &amp; Cheyney-Collante, K. (2027, April). Improving teacher self-efficacy for teaching reading: Observational and experimental evidence from large-scale online professional learning. AERA’27, Toronto, ON. (Accepted)</li>
+        <li><span class="badge b-conf">Conference</span><span class="me">Lee, S. S.</span> (2026, April). Supporting instructional sense-making through early engagement clustering in online professional learning. AERA’26, Los Angeles, CA.</li>
+        <li><span class="badge b-conf">Conference</span><span class="me">Lee, S. S.</span>, Pico, D. L., Cummings, C. M., Giani, M. V., Banks, J., Bratsch-Hines, M., &amp; Walton-Walker, T. (2026, April). Scaling success: Barriers and supports for completion of a statewide early literacy micro-credential. AERA’26, Los Angeles, CA.</li>
+        <li><span class="badge b-conf">Conference</span>Bratsch-Hines, M., <span class="me">Lee, S. S.</span>, Pico, D. L., Taksier, K. A., &amp; Xu, R. (2026, September). And/or? Scale versus impact of online literacy teacher professional learning. SREE’26.</li>
+        <li><span class="badge b-conf">Conference</span><span class="me">Lee, S. S.</span>, Dirghali, J., &amp; Leite, W. L. (2025, July). Stay the course: Causal insights from self-regulated learning patterns in online professional learning. EDM 2025 Workshop on Causal Inference.</li>
+        <li><span class="badge b-conf">Conference</span><span class="me">Lee, S. S.</span>, Humphrey, B., &amp; Moore, R. L. (2024, October). Lessons learned from the development of a literacy educator microcredential initiative. AECT’24, Kansas City, MO.</li>
+      </ul>
+    </details>
+    <details class="folder">
+      <summary>
+        <span class="ftop"><h3>STEM micro-credentials in higher education (ALIGN project)</h3></span>
+        <p class="fdesc">Part of the NSF CAREER-funded ALIGN project: how institutions implement STEM micro-credentials and how they can better support learners.</p>
+      </summary>
+      <ul class="works">
+        <li><span class="badge b-journal">Journal</span>Moore, R. L., <span class="me">Lee, S. S.</span>, Pate, A. T., &amp; Wilson, A. J. (2025). Systematic review of digital microcredentials: Trends in assessment and delivery. <em>Distance Education, 46</em>(1), 8–35. <a href="https://doi.org/10.1080/01587919.2024.2441263">https://doi.org/10.1080/01587919.2024.2441263</a></li>
+        <li><span class="badge b-chapter">Book chapter</span>Moore, R. L., <span class="me">Lee, S. S.</span>, &amp; Crippen, K. (2026). From badges to pathways: Charting the STEM microcredential ecosystem. In R. L. Moore &amp; K. J. Crippen (Eds.), <em>Mapping the STEM microcredential landscape: Vol. I</em>. Springer.</li>
+        <li><span class="badge b-review">Under review</span>Moore, R. L., Crippen, K., &amp; <span class="me">Lee, S. S.</span> From barriers to opportunities: Strategies for implementing STEM microcredentials in higher education.</li>
+        <li><span class="badge b-conf">Conference</span><span class="me">Lee, S. S.</span>, Bobie-Ansah, D., &amp; Moore, R. L. (2026, November). Where is learner support in microcredentials? Bridging learner-centered intent and institutional capacity. AECT’26, Chicago, IL.</li>
+        <li><span class="badge b-conf">Conference</span>Das, K., <span class="me">Lee, S. S.</span>, Wilson, A., &amp; Moore, R. L. (2027, April). Designed diffusion: Extending diffusion theory for competency-based teacher learning. AERA’27, Toronto, ON. (Accepted)</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="area" id="analytics" aria-labelledby="analytics-h">
+    <h2 id="analytics-h">Learning analytics of engagement and persistence</h2>
+    <p class="desc">A methodological strand across both lines: using survival analysis, clustering, and temporal analysis to understand how learners engage, persist, or disengage in online environments.</p>
+    <details class="folder">
+      <summary>
+        <span class="ftop"><h3>Persistence in open online learning</h3></span>
+        <p class="fdesc">How learners’ intentions shape engagement and dropout in MOOCs.</p>
+      </summary>
+      <ul class="works">
+        <li><span class="badge b-journal">Journal</span>Moore, R. L., Wang, C., &amp; <span class="me">Lee, S. S.</span> (2026). Understanding MOOC dropout through learner intentions: A persona-based survival analysis. <em>Computers &amp; Education, 250</em>, 105636. <a href="https://doi.org/10.1016/j.compedu.2026.105636">https://doi.org/10.1016/j.compedu.2026.105636</a></li>
+        <li><span class="badge b-journal">Journal</span>Moore, R. L., Wang, C., Liu, L., &amp; <span class="me">Lee, S. S.</span> (2025). The knowledge quest: Navigating the learner-intention continuum from curiosity to achievement. <em>Education and Information Technologies, 30</em>, 1–19. <a href="https://doi.org/10.1007/s10639-025-13327-9">https://doi.org/10.1007/s10639-025-13327-9</a></li>
+        <li><span class="badge b-review">Under review</span>Moore, R. L., Wang, C., <span class="me">Lee, S. S.</span>, &amp; Bobie-Ansah, D. An alignment framework for learner success in semi-formal digital learning environments.</li>
+      </ul>
+    </details>
+    <details class="folder">
+      <summary>
+        <span class="ftop"><h3>Engagement in social annotation</h3></span>
+        <p class="fdesc">How learning analytics shape student engagement in collaborative annotation over time.</p>
+      </summary>
+      <ul class="works">
+        <li><span class="badge b-journal">Journal</span>Jung, Y., <span class="me">Lee, S. S.</span>, &amp; Wise, A. (2026). Short-term gains, long-term gaps: Unpacking the role of learning analytics in student engagement in social annotation. <em>The Internet and Higher Education, 69</em>, 101078. <a href="https://doi.org/10.1016/j.iheduc.2026.101078">https://doi.org/10.1016/j.iheduc.2026.101078</a></li>
+        <li id="isls26"><span class="badge b-conf">Conference</span>Jung, Y., &amp; <span class="me">Lee, S. S.</span> (2026, June). Reframing social annotation as a text-embedded collaboration analytics ecology: The idea creation cycle in social annotation. ISLS’26, Irvine, CA. <span class="award">Best Short Paper Nomination</span></li>
+        <li id="aera26-sa"><span class="badge b-conf">Conference</span>Jung, Y., <span class="me">Lee, S. S.</span>, &amp; Wise, A. (2026, April). The ephemeral power of analytics: Tracing multi-dimensional engagement in social annotation over time. AERA’26, Los Angeles, CA. <span class="award">Best Paper Nomination, SIG-IT</span></li>
+      </ul>
+    </details>
+  </section>
+
+  <p><a class="back" href="index.html">← Back to home</a></p>
+</main>
+<footer>
+  <div class="inner">
+    <span>Sophia “Soomin” Lee · College of Education, University of Florida · <a href="mailto:soomin.lee@ufl.edu">soomin.lee@ufl.edu</a> · <a href="https://scholar.google.com/citations?user=dk0AcDkAAAAJ&amp;hl=en">Google Scholar</a> · <a href="https://orcid.org/0009-0003-9163-6767">ORCID</a> · <a href="https://www.linkedin.com/in/soomin-lee-03486b256/">LinkedIn</a></span>
+    <span>Updated November 2026</span>
+  </div>
+</footer>
+<script>
+(function () {
+  function openTarget() {
+    if (!location.hash) return;
+    var el = document.getElementById(location.hash.slice(1));
+    if (!el) return;
+    var d = el.closest('details');
+    if (d && !d.open) { d.open = true; }
+    if (d) el.scrollIntoView();
+  }
+  window.addEventListener('hashchange', openTarget);
+  openTarget();
+})();
+</script>
+</body>
+</html>
